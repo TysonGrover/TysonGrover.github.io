@@ -9,6 +9,17 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            .arsenal-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
+            .arsenal-item {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .arsenal-card {
+                padding: 30px 20px;
+            }
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -229,6 +240,63 @@
             font-weight: 600;
             color: #2c2c2c;
         }
+        /* Engineering Arsenal Section Styles */
+        .arsenal-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        .arsenal-section h2 {
+            font-size: 2.5rem;
+            color: #2c2c2c;
+            margin-bottom: 50px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .arsenal-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        .arsenal-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        .arsenal-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px 25px;
+            border-radius: 8px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .arsenal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+        }
+        .arsenal-card h3 {
+            font-size: 1.5rem;
+            color: #2c2c2c;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .arsenal-card p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        .arsenal-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+        .arsenal-image:hover {
+            transform: scale(1.02);
+        }
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -322,6 +390,40 @@
             <p>These experiences also broadened my exposure to a wide range of engineering disciplines, including programming, pneumatic and hydraulic systems, thermodynamics, design for manufacturing and assembly, and <span class="highlight">professional technical communication</span>. Each opportunity reinforced my passion for engineering and equipped me with skills essential to success in industry.</p>
             
             <p>Today, I am motivated to apply what I have learned in a professional setting. I am eager to contribute my <span class="highlight">technical abilities, hands-on experience, and strong work ethic</span> to industry while continuing to grow as an engineer.</p>
+        </div>
+    </section>
+
+    <section class="arsenal-section" id="arsenal">
+        <h2>Engineering Arsenal</h2>
+        <div class="arsenal-grid">
+            <div class="arsenal-item">
+                <div class="arsenal-card">
+                    <h3>Designing</h3>
+                    <p>CAD modeling, technical drawings, and design for manufacturing and assembly</p>
+                </div>
+                <img src="DesignPicture.jpg" alt="Design work" class="arsenal-image">
+            </div>
+            <div class="arsenal-item">
+                <img src="ProgrammingPicture.jpg" alt="Programming work" class="arsenal-image">
+                <div class="arsenal-card">
+                    <h3>Programming</h3>
+                    <p>Python, MATLAB, and automation tools for data analysis and process optimization</p>
+                </div>
+            </div>
+            <div class="arsenal-item">
+                <div class="arsenal-card">
+                    <h3>Simulation & Analysis</h3>
+                    <p>FEA, CFD, and computational modeling to validate designs and optimize performance</p>
+                </div>
+                <img src="SimulationPicture.jpg" alt="Simulation work" class="arsenal-image">
+            </div>
+            <div class="arsenal-item">
+                <img src="FabricationPicture.jpg" alt="Fabrication work" class="arsenal-image">
+                <div class="arsenal-card">
+                    <h3>Fabrication</h3>
+                    <p>Hands-on machining, 3D printing, and manufacturing processes from prototype to production</p>
+                </div>
+            </div>
         </div>
     </section>
 </body>

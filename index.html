@@ -14,14 +14,42 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #e8e8e8 0%, #d4d4d4 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 0;
+        }
+        /* Header Navigation Styles */
+        .header {
+            background-color: #f5f5f5;
+            padding: 20px 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        .nav-btn {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2c2c2c;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+        .nav-btn:hover {
+            color: #555;
         }
         .hero-section {
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
         }
         .container {
             text-align: center;
@@ -96,12 +124,29 @@
             max-width: 1100px;
             margin: 0 auto;
             padding: 60px 20px;
+            position: relative;
+        }
+        .info-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('StGeorge.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            border-radius: 12px;
+            z-index: 0;
         }
         .info-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
         .info-image {
             width: 100%;
@@ -212,11 +257,25 @@
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
+            .header {
+                padding: 15px 20px;
+            }
+            .nav {
+                gap: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="hero-section">
+    <header class="header">
+        <nav class="nav">
+            <a href="#home" class="nav-btn">Home</a>
+            <a href="#projects" class="nav-btn">Projects</a>
+            <a href="#contact" class="nav-btn">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero-section" id="home">
         <div class="container">
             <h1>Hi! I'm Tyson</h1>
             <p class="tagline">INTEGRITY - PASSION - DILIGENCE</p>

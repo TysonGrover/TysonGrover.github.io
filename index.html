@@ -310,6 +310,69 @@
         .arsenal-image:hover {
             transform: scale(1.02);
         }
+        /* Career Goals Section Styles */
+        .goals-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        .goals-section h2 {
+            font-size: 2.5rem;
+            color: #2c2c2c;
+            margin-bottom: 50px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .goals-image {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            margin: 0 auto 50px;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .goals-image:hover {
+            transform: scale(1.02);
+        }
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+        .goal-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .goal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+        }
+        .goal-card h3 {
+            font-size: 1.5rem;
+            color: #2c2c2c;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .goal-card p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        /* Footer Styles */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #f5f5f5;
+            color: #555;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -404,7 +467,7 @@
             
             <p>Today, I am motivated to apply what I have learned in a professional setting. I am eager to contribute my <span class="highlight">technical abilities, hands-on experience, and strong work ethic</span> to industry while continuing to grow as an engineer.</p>
             
-            <p>Outside of engineering, I'm usually outdoors camping, reading autobiographies, or getting involved in whatever sport I can find. Saturdays are my favorite—I fire up the grill for carne asada and roll tortillas by hand for my wife, Lydia, and any neighbors who follow the scent to our backyard.</p>
+            <p>Outside of engineering, I'm usually outdoors camping, reading autobiographies, or getting involved in whatever sport I can find. Saturdays are my favorite—I fire up the grill for carne asada and roll tortillas by hand with my wife, Lydia, for any neighbors who follow the scent to our backyard.</p>
             
             <img src="GrillPicture.jpg" alt="Grilling carne asada" class="about-image">
         </div>
@@ -443,5 +506,28 @@
             </div>
         </div>
     </section>
+
+    <section class="goals-section" id="goals">
+        <h2>Career Goals</h2>
+        <img src="FlagPicture.jpeg" alt="Career goals inspiration" class="goals-image">
+        <div class="goals-grid">
+            <div class="goal-card">
+                <h3>Serve & Strengthen Communities</h3>
+                <p>Apply engineering expertise to develop solutions that improve quality of life and create lasting positive impact in the communities I serve</p>
+            </div>
+            <div class="goal-card">
+                <h3>Advance to Engineering Leadership</h3>
+                <p>Grow into a leadership position where I can mentor teams, drive innovation, and guide strategic technical decisions</p>
+            </div>
+            <div class="goal-card">
+                <h3>Master Instrumentation & Controls</h3>
+                <p>Develop deep expertise in instrumentation and controls engineering to become a trusted specialist in automation and measurement systems</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Tyson Grover. All rights reserved.</p>
+    </footer>
 </body>
 </html>

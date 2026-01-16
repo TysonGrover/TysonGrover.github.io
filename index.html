@@ -91,6 +91,62 @@
         .btn:active {
             transform: translateY(0);
         }
+        /* Info Section Styles */
+        .info-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .info-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .info-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .info-image:hover {
+            transform: scale(1.02);
+        }
+        .info-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        .info-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px 25px;
+            border-radius: 8px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+        }
+        .info-card h3 {
+            font-size: 1.4rem;
+            color: #2c2c2c;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .info-card p {
+            font-size: 1rem;
+            color: #555;
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        .info-card .emphasis {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #3a3a3a;
+        }
         /* About Section Styles */
         .about-section {
             max-width: 900px;
@@ -121,6 +177,13 @@
         .about-content p:last-child {
             margin-bottom: 0;
         }
+        .highlight {
+            background: linear-gradient(120deg, #ffd93d 0%, #ffb84d 100%);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+            color: #2c2c2c;
+        }
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -145,6 +208,10 @@
             .about-content p {
                 font-size: 1rem;
             }
+            .info-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
         }
     </style>
 </head>
@@ -163,18 +230,39 @@
         </div>
     </div>
 
+    <section class="info-section">
+        <div class="info-container">
+            <img src="Drawing2Part.jpeg" alt="Engineering drawing" class="info-image">
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3>Mechanical Engineer</h3>
+                    <p class="emphasis">EIT</p>
+                    <p>Graduating Spring 2026</p>
+                </div>
+                <div class="info-card">
+                    <h3>Utah Tech University</h3>
+                    <p>ABET accredited school</p>
+                </div>
+                <div class="info-card">
+                    <h3>Applied Engineering</h3>
+                    <p>From concept to validation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="about-section" id="about">
         <h2>About Me</h2>
         <div class="about-content">
-            <p>Engineering is more than a job to me. From a young age, I was drawn to understanding how the technologies around me worked and how they could be improved. Early exposure to manufacturing and programming sparked that curiosity. Whether it was using radios to communicate during skiing trips or being fascinated by the mechanics of a four-wheeler transmission that could shift gears with a simple movement of my heel, I was constantly learning through observation and experience.</p>
+            <p>Engineering is more than a job to me. From a young age, I was drawn to understanding how the technologies around me worked and how they could be improved. Early exposure to manufacturing and programming sparked that curiosity. Whether it was using radios to communicate during skiing trips or being fascinated by the mechanics of a four-wheeler transmission that could shift gears with a simple movement of my heel, I was <span class="highlight">constantly learning through observation and experience</span>.</p>
             
-            <p>Working summers building homes further shaped my interest in engineering. Hands-on construction taught me the practical application of mechanical principles and deepened my appreciation for the design process behind functional structures. Seeing plans come to life in the field reinforced my interest in how thoughtful engineering directly impacts the way people live and work.</p>
+            <p>Working summers building homes further shaped my interest in engineering. <span class="highlight">Hands-on construction</span> taught me the practical application of mechanical principles and deepened my appreciation for the design process behind functional structures. Seeing plans come to life in the field reinforced my interest in how thoughtful engineering directly impacts the way people live and work.</p>
             
-            <p>By the time I graduated high school, pursuing mechanical engineering was a natural decision. My academic experience challenged me with complex, hands-on projects that strengthened my critical thinking and creative problem-solving skills. Through internships, I gained valuable experience teaching manufacturing processes to freshman students, which sharpened both my technical understanding and my ability to communicate complex concepts clearly.</p>
+            <p>By the time I graduated high school, pursuing mechanical engineering was a natural decision. My academic experience challenged me with complex, hands-on projects that strengthened my <span class="highlight">critical thinking and creative problem-solving skills</span>. Through internships, I gained valuable experience teaching manufacturing processes to freshman students, which sharpened both my technical understanding and my <span class="highlight">ability to communicate complex concepts clearly</span>.</p>
             
-            <p>These experiences also broadened my exposure to a wide range of engineering disciplines, including programming, pneumatic and hydraulic systems, thermodynamics, design for manufacturing and assembly, and professional technical communication. Each opportunity reinforced my passion for engineering and equipped me with skills essential to success in industry.</p>
+            <p>These experiences also broadened my exposure to a wide range of engineering disciplines, including programming, pneumatic and hydraulic systems, thermodynamics, design for manufacturing and assembly, and <span class="highlight">professional technical communication</span>. Each opportunity reinforced my passion for engineering and equipped me with skills essential to success in industry.</p>
             
-            <p>Today, I am motivated to apply what I have learned in a professional setting. I am eager to contribute my technical abilities, hands-on experience, and strong work ethic to industry while continuing to grow as an engineer.</p>
+            <p>Today, I am motivated to apply what I have learned in a professional setting. I am eager to contribute my <span class="highlight">technical abilities, hands-on experience, and strong work ethic</span> to industry while continuing to grow as an engineer.</p>
         </div>
     </section>
 </body>

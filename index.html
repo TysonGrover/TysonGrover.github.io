@@ -10,23 +10,24 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #e8e8e8 0%, #d4d4d4 100%);
             min-height: 100vh;
+            padding: 20px;
+        }
+        .hero-section {
             display: flex;
             align-items: center;
             justify-content: center;
+            min-height: 100vh;
             padding: 20px;
         }
-
         .container {
             text-align: center;
             max-width: 800px;
             animation: fadeIn 1s ease-in;
         }
-
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -37,14 +38,12 @@
                 transform: translateY(0);
             }
         }
-
         h1 {
             font-size: 3.5rem;
             color: #2c2c2c;
             margin-bottom: 20px;
             font-weight: 700;
         }
-
         .tagline {
             font-size: 1.1rem;
             color: #555;
@@ -52,7 +51,6 @@
             text-transform: uppercase;
             margin-bottom: 50px;
         }
-
         .profile-image {
             width: 280px;
             height: 280px;
@@ -63,18 +61,15 @@
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
         }
-
         .profile-image:hover {
             transform: scale(1.05);
         }
-
         .button-group {
             display: flex;
             gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
         }
-
         .btn {
             padding: 16px 40px;
             font-size: 1rem;
@@ -88,52 +83,99 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
-
         .btn:hover {
             background-color: #2a2a2a;
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
-
         .btn:active {
             transform: translateY(0);
         }
-
+        /* About Section Styles */
+        .about-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            animation: fadeIn 1.2s ease-in;
+        }
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c2c2c;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .about-content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            line-height: 1.8;
+        }
+        .about-content p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .about-content p:last-child {
+            margin-bottom: 0;
+        }
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
             }
-
             .tagline {
                 font-size: 0.9rem;
             }
-
             .profile-image {
                 width: 220px;
                 height: 220px;
             }
-
             .btn {
                 padding: 14px 30px;
                 font-size: 0.9rem;
+            }
+            .about-section h2 {
+                font-size: 2rem;
+            }
+            .about-content {
+                padding: 30px 25px;
+            }
+            .about-content p {
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hi! I'm Tyson</h1>
-        <p class="tagline">INTEGRITY - PASSION - DILIGENCE</p>
-        
-        <img src="Headshot Picture.jpg" alt="Tyson's profile photo" class="profile-image">
-        
-        <div class="button-group">
-            <a href="#work" class="btn">View My Work</a>
-            <a href="Resume 1.pdf" class="btn" target="_blank">View My Resume</a>
+    <div class="hero-section">
+        <div class="container">
+            <h1>Hi! I'm Tyson</h1>
+            <p class="tagline">INTEGRITY - PASSION - DILIGENCE</p>
+            
+            <img src="Headshot Picture.jpg" alt="Tyson's profile photo" class="profile-image">
+            
+            <div class="button-group">
+                <a href="#work" class="btn">View My Work</a>
+                <a href="Resume 1.pdf" class="btn" target="_blank">View My Resume</a>
+            </div>
         </div>
     </div>
+
+    <section class="about-section" id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>Engineering is more than a job to me. From a young age, I was drawn to understanding how the technologies around me worked and how they could be improved. Early exposure to manufacturing and programming sparked that curiosity. Whether it was using radios to communicate during skiing trips or being fascinated by the mechanics of a four-wheeler transmission that could shift gears with a simple movement of my heel, I was constantly learning through observation and experience.</p>
+            
+            <p>Working summers building homes further shaped my interest in engineering. Hands-on construction taught me the practical application of mechanical principles and deepened my appreciation for the design process behind functional structures. Seeing plans come to life in the field reinforced my interest in how thoughtful engineering directly impacts the way people live and work.</p>
+            
+            <p>By the time I graduated high school, pursuing mechanical engineering was a natural decision. My academic experience challenged me with complex, hands-on projects that strengthened my critical thinking and creative problem-solving skills. Through internships, I gained valuable experience teaching manufacturing processes to freshman students, which sharpened both my technical understanding and my ability to communicate complex concepts clearly.</p>
+            
+            <p>These experiences also broadened my exposure to a wide range of engineering disciplines, including programming, pneumatic and hydraulic systems, thermodynamics, design for manufacturing and assembly, and professional technical communication. Each opportunity reinforced my passion for engineering and equipped me with skills essential to success in industry.</p>
+            
+            <p>Today, I am motivated to apply what I have learned in a professional setting. I am eager to contribute my technical abilities, hands-on experience, and strong work ethic to industry while continuing to grow as an engineer.</p>
+        </div>
+    </section>
 </body>
 </html>
-
-
-

@@ -95,10 +95,38 @@
 
         .contact-item {
             margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .contact-item:last-child {
             margin-bottom: 0;
+        }
+
+        .contact-value-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .copy-btn {
+            background-color: #3d3d3d;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .copy-btn:hover {
+            background-color: #555;
+        }
+
+        .copy-btn.copied {
+            background-color: #4CAF50;
         }
 
         .contact-label {
@@ -147,31 +175,65 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <div class="contact-label">Name</div>
-                    <div class="contact-value">Tyson Grover, E.I.T</div>
+                    <div class="contact-value-wrapper">
+                        <div class="contact-value">Tyson Grover, E.I.T</div>
+                    </div>
                 </div>
 
                 <div class="contact-item">
                     <div class="contact-label">Phone</div>
-                    <div class="contact-value">
-                        <a href="tel:+14355128445">(435) 512-8445</a>
+                    <div class="contact-value-wrapper">
+                        <div class="contact-value">
+                            <a href="tel:+14355128445">(435) 512-8445</a>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('(435) 512-8445', this)">Copy</button>
                     </div>
                 </div>
 
                 <div class="contact-item">
                     <div class="contact-label">Email</div>
-                    <div class="contact-value">
-                        <a href="mailto:groverty6@gmail.com">groverty6@gmail.com</a>
+                    <div class="contact-value-wrapper">
+                        <div class="contact-value">
+                            <a href="mailto:groverty6@gmail.com">groverty6@gmail.com</a>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('groverty6@gmail.com', this)">Copy</button>
                     </div>
                 </div>
 
                 <div class="contact-item">
                     <div class="contact-label">LinkedIn</div>
-                    <div class="contact-value">
-                        <a href="https://www.linkedin.com/in/tyson-grover-074947228/" target="_blank">linkedin.com/in/tyson-grover</a>
+                    <div class="contact-value-wrapper">
+                        <div class="contact-value">
+                            <a href="https://www.linkedin.com/in/tyson-grover-074947228/" target="_blank">linkedin.com/in/tyson-grover</a>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('https://www.linkedin.com/in/tyson-grover-074947228/', this)">Copy</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        function copyToClipboard(text, button) {
+            navigator.clipboard.writeText(text).then(function() {
+                // Change button text and style to show success
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.classList.add('copied');
+                
+                // Reset button after 2 seconds
+                setTimeout(function() {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Failed to copy text: ', err);
+                button.textContent = 'Failed';
+                setTimeout(function() {
+                    button.textContent = 'Copy';
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>

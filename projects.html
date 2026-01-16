@@ -118,11 +118,12 @@
 
         .main-project-image {
             width: 100%;
-            height: 500px;
-            object-fit: cover;
+            height: 350px;
+            object-fit: contain;
             border-radius: 8px;
             margin-bottom: 1.5rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background-color: var(--light-gray);
         }
 
         .project-description {
@@ -186,6 +187,13 @@
         .step-image {
             width: 100%;
             height: 200px;
+            object-fit: cover;
+            background-color: var(--light-gray);
+        }
+
+        .step-image-large {
+            width: 100%;
+            height: 320px;
             object-fit: cover;
             background-color: var(--light-gray);
         }
@@ -271,11 +279,11 @@
                     <img src="DropShockInvestigate.jpg" alt="Investigation Phase" class="step-image">
                     <div class="step-caption">
                         <ul style="margin: 0; padding-left: 1.2rem;">
-                            <li>Decided between many different conceptual designs</li>
-                            <li>Performed calculations on concepts</li>
-                            <li>Frequently counseled with RAM about designs</li>
-                            <li>Planned standard components to incorporate in design</li>
-                            <li>Made programs to test metrics of our chosen design</li>
+                            <li>Evaluated multiple conceptual design approaches</li>
+                            <li>Performed engineering calculations to validate concepts</li>
+                            <li>Maintained regular consultation with RAM on design iterations</li>
+                            <li>Identified standard components for integration into design</li>
+                            <li>Developed testing programs to verify design performance metrics</li>
                         </ul>
                     </div>
                 </div>
@@ -314,45 +322,62 @@
             </div>
         </div>
 
-        <!-- Project 2: Add more projects following the same structure -->
+        <!-- Project 2: Boat Propulsion System -->
         <div class="project-section">
-            <h2 class="project-title">Project: Robotics Control System</h2>
-            <img src="robotics-main.jpg" alt="Robotics Project" class="main-project-image">
+            <h2 class="project-title">Project: Boat Propulsion System</h2>
+            <img src="BoatOverview.jpg" alt="Boat Propulsion System" class="main-project-image">
             <p class="project-description">
-                Developed an autonomous navigation system for mobile robots using sensor fusion and machine learning algorithms to enable precise path planning and obstacle avoidance.
+                Constructed an innovative propulsion system for a paddleboat over a span of 4 months, significantly increasing public usability and enjoyment. Engineered gear box and water-sealing enclosures with OnShape, enhancing design functionality through DFA/DFM principles.
             </p>
             
             <div class="steps-container">
                 <div class="step-card">
-                    <div class="step-header">Step 1: Research</div>
-                    <img src="robotics-step1.jpg" alt="Research Phase" class="step-image">
+                    <div class="step-header">Goals</div>
+                    <img src="BoatGoals.jpg" alt="Goals Phase" class="step-image">
                     <div class="step-caption">
-                        Analyzed existing navigation algorithms and identified key requirements for autonomous movement.
+                        <ul style="margin: 0; padding-left: 1.2rem;">
+                            <li>Design and construct an attachment system to propel a paddle boat</li>
+                            <li>Complete project within 4-month timeline</li>
+                            <li>Maintain budget constraint of $800</li>
+                            <li>Manufacture all components using college machinery</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="step-card">
-                    <div class="step-header">Step 2: Design</div>
-                    <img src="robotics-step2.jpg" alt="Design Phase" class="step-image">
+                    <div class="step-header">New Skills Acquired</div>
                     <div class="step-caption">
-                        Created system architecture combining LIDAR, cameras, and IMU sensors for comprehensive environment mapping.
+                        <ul style="margin: 0; padding-left: 1.2rem;">
+                            <li>CNC mill</li>
+                            <li>Manual mill</li>
+                            <li>Manual lathe</li>
+                            <li>Fusion360 CAM</li>
+                            <li>OnShape CAD (Designing for manufacturability and assembling)</li>
+                            <li>3D Printing</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="step-card">
-                    <div class="step-header">Step 3: Implementation</div>
-                    <img src="robotics-step3.jpg" alt="Implementation Phase" class="step-image">
+                    <div class="step-header">CNC Mill</div>
+                    <img src="BoatCNCMill.jpg" alt="CNC Mill" class="step-image-large">
                     <div class="step-caption">
-                        Implemented ROS-based control system with real-time sensor data processing.
                     </div>
                 </div>
 
                 <div class="step-card">
-                    <div class="step-header">Step 4: Testing</div>
-                    <img src="robotics-step4.jpg" alt="Testing Phase" class="step-image">
-                    <div class="step-caption">
-                        Validated system performance in various indoor and outdoor environments.
-                    </div>
+                    <div class="step-header">Manual Mill</div>
+                    <img src="BoatManualMill.jpg" alt="Manual Mill" class="step-image-large">
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">Manual Lathe</div>
+                    <img src="BoatManualLathe.jpg" alt="Manual Lathe" class="step-image-large">
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">CAM - Fusion360</div>
+                    <img src="BoatToolpath.jpg" alt="CAM - Fusion360" class="step-image-large">
                 </div>
             </div>
         </div>

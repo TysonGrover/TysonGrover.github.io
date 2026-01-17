@@ -437,7 +437,7 @@
         .scroll-indicator {
             position: fixed;
             bottom: 30px;
-            left: 50%;
+            left: 20%;
             transform: translateX(-50%);
             z-index: 100;
             text-align: center;
@@ -445,8 +445,11 @@
             opacity: 0;
             transition: opacity 0.5s ease;
         }
+        .scroll-indicator.visible {
+            opacity: 1;
+        }
         .scroll-indicator.hidden {
-            opacity: 0;
+            opacity: 0 !important;
             pointer-events: none;
         }
         @keyframes fadeInScroll {
@@ -510,6 +513,10 @@
             }
             .nav {
                 gap: 20px;
+            }
+            .scroll-indicator {
+                left: 50%;
+                bottom: 20px;
             }
         }
     </style>
@@ -623,7 +630,7 @@
 
     <section class="goals-section" id="goals">
         <h2>Career Goals</h2>
-        <img src="FlagPicture.jpg" alt="Career goals inspiration" class="goals-image">
+        <img src="FlagPicture2.jpg" alt="Career goals inspiration" class="goals-image">
         <div class="goals-grid">
             <div class="goal-card">
                 <h3>Serve & Strengthen Communities</h3>
@@ -648,11 +655,18 @@
         // Scroll indicator functionality
         const scrollIndicator = document.getElementById('scrollIndicator');
         
+        // Add visible class after initial fade in
+        setTimeout(() => {
+            scrollIndicator.classList.add('visible');
+        }, 1500);
+        
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
                 scrollIndicator.classList.add('hidden');
+                scrollIndicator.classList.remove('visible');
             } else {
                 scrollIndicator.classList.remove('hidden');
+                scrollIndicator.classList.add('visible');
             }
         });
     </script>
